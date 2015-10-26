@@ -128,6 +128,7 @@
 				2E31B6121BD6F28C00141ABF /* Frameworks */,
 				2E31B6131BD6F28C00141ABF /* Resources */,
 				CD8CD4AE2AC673BE847898FF /* Copy Pods Resources */,
+				2355777B5A6BA57CEA57C390 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +186,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2355777B5A6BA57CEA57C390 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rotten Tomatoes/Pods-Rotten Tomatoes-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		517A2A472D9717364B4E9F5D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

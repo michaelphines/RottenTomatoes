@@ -10,6 +10,7 @@
 #import "MoviesTableViewCell.h"
 #import "MovieDetailsViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "SVProgressHUD.h"
 
 @interface MoviesViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -28,6 +29,7 @@
 }
 
 - (void) fetchMovies {
+    [SVProgressHUD show];
     NSString *urlString = @"https://gist.githubusercontent.com/timothy1ee/d1778ca5b944ed974db0/raw/489d812c7ceeec0ac15ab77bf7c47849f2d1eb2b/gistfile1.json";
     
     NSURL *url = [NSURL URLWithString:urlString];
@@ -53,6 +55,7 @@
                                                 } else {
                                                     NSLog(@"An error occurred: %@", error.description);
                                                 }
+                                                [SVProgressHUD dismiss];
                                             }];
     [task resume];
 }

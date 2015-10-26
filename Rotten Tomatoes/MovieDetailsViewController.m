@@ -27,15 +27,17 @@
     [self.posterImageView setImageWithURL: [self fullSizedImageUrl]];
     self.titleLabel.text = self.movie[@"title"];
     self.detailsLabel.text = self.movie[@"synopsis"];
+    [self autoSizeLabel];
+}
+
+- (void)autoSizeLabel {
     [self.detailsLabel sizeToFit];
-    
     CGFloat subviewHeight = self.titleLabel.bounds.size.height + self.detailsLabel.bounds.size.height + 20;
     CGRect existingFrame = self.detailsSubView.frame;
     self.detailsSubView.frame = CGRectMake(existingFrame.origin.x, existingFrame.origin.y, existingFrame.size.width, subviewHeight + 1000);
     
     CGFloat width = self.scrollView.bounds.size.width;
     CGFloat height = self.detailsSubView.frame.origin.y + subviewHeight;
-    NSLog(@"width: %f, height: %f", width, height);
     self.scrollView.contentSize = CGSizeMake(width, height);
 }
 

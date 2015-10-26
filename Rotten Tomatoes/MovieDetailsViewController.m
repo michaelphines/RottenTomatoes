@@ -7,8 +7,15 @@
 //
 
 #import "MovieDetailsViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface MovieDetailsViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *posterImageView;
+@property (weak, nonatomic) IBOutlet UILabel *detailsLabel;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *detailsSubView;
 
 @end
 
@@ -16,7 +23,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    NSLog(@"%@", self.movie);
+    [self.posterImageView setImageWithURL: [self fullSizedImageUrl]];
+    self.titleLabel.text = self.movie[@"title"];
+    self.detailsLabel.text = self.movie[@"synopsis"];
+    [self.detailsLabel sizeToFit];
+    
+    CGFloat subviewHeight = self.titleLabel.bounds.size.height + self.detailsLabel.bounds.size.height + 20;
+    CGRect existingFrame = self.detailsSubView.frame;
+    self.detailsSubView.frame = CGRectMake(existingFrame.origin.x, existingFrame.origin.y, existingFrame.size.width, subviewHeight + 1000);
+    
+    CGFloat width = self.scrollView.bounds.size.width;
+    CGFloat height = self.detailsSubView.frame.origin.y + subviewHeight;
+    NSLog(@"width: %f, height: %f", width, height);
+    self.scrollView.contentSize = CGSizeMake(width, height);
+}
+
+- (NSURL *)fullSizedImageUrl {
+    NSString *originalUrlString = self.movie[@"posters"][@"original"];
+    NSRange hostRange = [originalUrlString rangeOfString:@".*cloudfront.net/"
+                                           options:NSRegularExpressionSearch];
+    NSString *contentUrlString = [originalUrlString stringByReplacingCharactersInRange:hostRange
+                                                    withString:@"https://content6.flixster.com/"];
+    return [NSURL URLWithString:contentUrlString];
 }
 
 - (void)didReceiveMemoryWarning {

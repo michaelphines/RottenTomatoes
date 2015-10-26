@@ -61,16 +61,15 @@
     return self.movies.count;
 }
 
-- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     MovieDetailsViewController *detailsView = [[MovieDetailsViewController alloc] init];
-    // details.movie = so the view knows about the movie
+    detailsView.movie = self.movies[indexPath.row];
     [self.navigationController pushViewController:detailsView animated:YES];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MoviesTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"movieCell"];
-    NSLog(@"%@", self.movies[indexPath.row][@"posters"][@"thumbnail"]);
     NSURL *url = [NSURL URLWithString:self.movies[indexPath.row][@"posters"][@"thumbnail"]];
     [cell.imageCell setImageWithURL:url];
     cell.titleLabel.text = self.movies[indexPath.row][@"title"];

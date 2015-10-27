@@ -13,10 +13,11 @@
 		2E31B6231BD6F28C00141ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E31B6211BD6F28C00141ABF /* Main.storyboard */; };
 		2E31B6251BD6F28C00141ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E31B6241BD6F28C00141ABF /* Assets.xcassets */; };
 		2E31B6281BD6F28C00141ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E31B6261BD6F28C00141ABF /* LaunchScreen.storyboard */; };
-		2E31B6311BD6F87800141ABF /* MoviesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E31B6301BD6F87800141ABF /* MoviesTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		2ED1F3E01BD709D4008131C8 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1F3DE1BD709D4008131C8 /* MovieDetailsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		2ED1F3E11BD709D4008131C8 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ED1F3DF1BD709D4008131C8 /* MovieDetailsViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		2E31B6311BD6F87800141ABF /* MoviesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E31B6301BD6F87800141ABF /* MoviesTableViewCell.m */; };
+		2ED1F3E01BD709D4008131C8 /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ED1F3DE1BD709D4008131C8 /* MovieDetailsViewController.m */; };
+		2ED1F3E11BD709D4008131C8 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ED1F3DF1BD709D4008131C8 /* MovieDetailsViewController.xib */; };
 		344F3AAAEBD0470FFD46FC56 /* libPods-Rotten Tomatoes.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BB560C1A35C35780A651C409 /* libPods-Rotten Tomatoes.a */; };
+		C44876991BDF11E400AB6CFD /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = C44876981BDF11E400AB6CFD /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2ED1F3DE1BD709D4008131C8 /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
 		2ED1F3DF1BD709D4008131C8 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		BB560C1A35C35780A651C409 /* libPods-Rotten Tomatoes.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Rotten Tomatoes.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C44876981BDF11E400AB6CFD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				2E31B61C1BD6F28C00141ABF /* AppDelegate.m */,
 				2E31B61E1BD6F28C00141ABF /* MoviesViewController.h */,
 				2E31B61F1BD6F28C00141ABF /* MoviesViewController.m */,
+				C44876981BDF11E400AB6CFD /* README.md */,
 				2E31B6211BD6F28C00141ABF /* Main.storyboard */,
 				2E31B62F1BD6F87800141ABF /* MoviesTableViewCell.h */,
 				2E31B6301BD6F87800141ABF /* MoviesTableViewCell.m */,
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C44876991BDF11E400AB6CFD /* README.md in Sources */,
 				2ED1F3E01BD709D4008131C8 /* MovieDetailsViewController.m in Sources */,
 				2E31B6201BD6F28C00141ABF /* MoviesViewController.m in Sources */,
 				2E31B61D1BD6F28C00141ABF /* AppDelegate.m in Sources */,
